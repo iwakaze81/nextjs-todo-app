@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Flutter
+      - name: Setup Web
         uses: ./.github/actions/setup_web
 
       - run: 'pnpm build:web'
