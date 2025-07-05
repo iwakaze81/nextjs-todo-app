@@ -1,0 +1,11 @@
+name: "setup-web"
+description: "Setup Web"
+runs:
+  using: "composite"
+  steps:
+    - name: Use Volta-managed Node
+      run: node -v  # Volta 経由で実行される
+
+    - name: Install dependencies
+      run: pnpm install
+      
