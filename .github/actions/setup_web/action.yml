@@ -12,10 +12,13 @@ runs:
       shell: bash
       run: echo "$HOME/.volta/bin" >> $GITHUB_PATH
 
+    - name: Install Node.js via Volta
+      shell: bash
+      run: volta install node@20.11.1
+
     - name: Install pnpm via Volta
       shell: bash
       run: volta install pnpm@9.2.0
-
 
     - name: Show versions
       shell: bash
