@@ -7,6 +7,10 @@ runs:
       shell: bash
       run: node -v  # Volta 経由で実行される
 
+    - name: Use Volta-managed pnpm
+      shell: bash
+      run: volta install pnpm@9.2.0
+
     - name: Install dependencies
       shell: bash
       run: pnpm install
