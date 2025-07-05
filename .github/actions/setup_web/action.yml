@@ -1,0 +1,31 @@
+name: "setup-web"
+description: "Setup Web"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Volta
+      shell: bash
+      run: curl https://get.volta.sh | bash
+
+    - name: Add Volta to PATH
+      shell: bash
+      run: echo "$HOME/.volta/bin" >> $GITHUB_PATH
+
+    - name: Install Node.js via Volta
+      shell: bash
+      run: volta install node@20.11.1
+
+    - name: Install pnpm via Volta
+      shell: bash
+      run: volta install pnpm@9.2.0
+
+    - name: Show versions
+      shell: bash
+      run: |
+        node -v
+        pnpm -v
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install
