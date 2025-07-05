@@ -6,8 +6,7 @@ runs:
   steps:
     - name: Install Volta
       shell: bash
-      run: |
-        curl https://get.volta.sh | bash -s -- -y
+      run: curl https://get.volta.sh | bash
 
     - name: Add Volta to PATH
       shell: bash
@@ -16,6 +15,7 @@ runs:
     - name: Install pnpm via Volta
       shell: bash
       run: volta install pnpm@9.2.0
+
 
     - name: Show versions
       shell: bash
