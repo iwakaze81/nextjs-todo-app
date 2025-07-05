@@ -4,8 +4,10 @@ runs:
   using: "composite"
   steps:
     - name: Use Volta-managed Node
+      shell: bash
       run: node -v  # Volta 経由で実行される
 
     - name: Install dependencies
+      shell: bash
       run: pnpm install
       
